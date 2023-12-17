@@ -1,80 +1,208 @@
 @charset "UTF-8";
-@import 'compass';
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@500&display=swap');
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', 'sans-serif';
-
+    font-family: 'Montserrat', sans-serif;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 body {
     width: auto;
-    min-height: 100%;
+    max-width: 100%;
+    min-height: 100vh;
     background: url(/images/pexels-anne-sakari.jpg);
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .banner {
-    height: 800px;
-    width: 1200px;
-    background-color: rgba(36, 186, 236, 0.5);
+    height: 70vh;
+    /* 50% of the viewport height */
+    width: 95%;
+    /* 90% of the viewport width */
+    max-width: 1200px;
     background: url(https://webbox.imgix.net/images/imvjealrgffpmdxq/7ed37fd1-245e-42f4-9339-b27a9adfe4c5.jpg?auto=format,compress&fit=crop&crop=entropy&w=1858);
     background-size: cover;
     background-position: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 
-.banner h1 {
-    font-size: 100px;
-    font-family: Brush Script MT, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+#banner-text {
+    font-size: 6vw;
+    font-family: Brush Script MT, sans-serif;
     color: white;
     background-color: rgba(22, 110, 243, 0.3);
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 20px;
+    /* Adjust spacing between menu items */
 }
 
 .navbar a {
-    padding-left: 50px;
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0c0cf5;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.navbar a:hover {
+    box-shadow: inset 200px 0 0 0 #77b11c;
+    color: white;
+}
+
+.welcome-message {
+    width: 95%;
+    text-align: center;
+}
+
+.welcome-message h1,
+.welcome-message h2 {
+    color: rgb(255, 7, 7);
+    font-family: 'Kaushan Script';
 }
 
 .welcome-message h1 {
-    margin-top: 50px;
-    font-size: 50px;
-    background-color: transparent;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 200px;
+    margin-top: -50px;
+    color: rgb(255, 7, 7);
+    width: 100%;
+    min-width: 10px;
+}
+
+/* Additional styles to improve responsiveness */
+@media (max-width: 768px) {
+    .banner {
+        height: auto;
+    }
+
+    #banner-text {
+        font-size: 8vw;
+    }
+
+    .welcome-message h1 {
+        font-size: 100px;
+        margin-top: -20px;
+    }
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 412px) {
+    .welcome-message h1 {
+        font-size: 50px;
+        margin-top: 0px;
+    }
+
+    .welcome-message h2 {
+        font-size: 20px;
+        padding-bottom: 0;
+        /* Corrected property value */
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-message h1 {
+        font-size: 150px;
+        margin-top: 0px;
+    }
+
+    .welcome-message h2 {
+        font-size: 20px;
+        padding-bottom: 0;
+        /* Corrected property value */
+    }
 }
 
 .landing-page-gallery-container {
-    height: auto;
-    width: 1200px;
-    margin-top: 20px;
-    background-color: rgb(240, 248, 255, 0.8);
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: rgba(240, 248, 255, 0.8);
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
 }
 
 .landing-page-gallery-container h1 {
+    width: 100%;
+    text-align: center;
     padding: 20px 0px;
 }
 
-.landing-page-gallery-container img {
-    height: 250px;
-    width: 350px;
+.gallery-group {
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-bottom: 20px;
 }
+
+.image-container {
+    overflow: hidden;
+    width: calc(33.33% - 10px); /* Adjusted width to include 10px gap */
+    margin: 0 5px; /* Adjusted margin to create 5px gaps on both sides */
+    float: left;
+    box-sizing: border-box;
+    height: 250px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+    display: block;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .image-container {
+        width: calc(50% - 10px);
+    }
+}
+
 
 .btn {
-    display: inline-block;
-    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    /* Set top and bottom margin to 50px and left/right margin to auto */
     text-decoration: none;
     padding: 20px 30px;
-    font-size: 30px;
+    font-size: 20px;
     border-radius: 20px;
+    background-color: #77b11c;
+    color: white;
 }
 
+
 .btn-bubble {
+    width: 200px;
     color: white;
     background-color: #77b11c;
     background-repeat: no-repeat;
@@ -101,55 +229,4 @@ body {
         background-position: 44% -233%, 68% -103%, 40% -356%, 71% -61%, 79% -17%, 64% -339%, 66% -37%, 4% 19%, 16% 51%, -15% -189%, 102% 36%;
         box-shadow: inset 0 -6.5em 0 #0072c4;
     }
-}
-
-/* -------------------------------- 
-  Images on landing page below welcome message
-💡 Styling siblings on hover
-🔗 https://codyhouse.co/nuggets/styling-siblings-on-hover
-
--------------------------------- */
-.radio-btns {
-    display: grid;
-    gap: 4px;
-    grid-template-columns: repeat(3, 100px);
-}
-
-.radio-btns:hover .radio-btns__btn:not(:hover) {
-    filter: grayscale(100%);
-    opacity: 0.75;
-}
-
-.radio-btns:hover .radio-btns__btn:not(:hover)::after {
-    background-color: rgba(#000, 0.5);
-}
-
-@media (min-width: 30rem) {
-    .radio-btns {
-        grid-template-columns: repeat(3, 350px);
-    }
-}
-
-.radio-btns__btn {
-    position: relative;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.radio-btns__btn::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(#000, 0);
-    transition: .3s;
-}
-
-.radio-btns__btn img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    margin-left: 70px;
 }
