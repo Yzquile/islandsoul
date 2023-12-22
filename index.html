@@ -17,18 +17,17 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 		integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-</head>F
+</head>
 
 <body>
 	<header>
 		<div class="navbar">
 			<div class="logo"><img src="images/Logo.png"></div>
 			<ul class="links">
-				<li><a href="#">Home</li>
-				<li><a href="#">Travel Tips</li>
-				<li><a href="#">Community Guide</li>
-				<li><a href="#">About</li>
+				<li><a href="index.html" class="navbar-active">Home</li>
+				<li><a href="traveltips.html">Travel Tips</li>
+				<li><a href="comguide.html">Community Guide</li>
+				<li><a href="more.html">More</li>
 			</ul>
 			<div class="toggle-btn">
 				<i class="fa-solid fa-bars"></i>
@@ -43,29 +42,15 @@
 
 		<div class="dropdown-menu">
 			<ul class="links">
-				<li><a href="#">Home</li>
-				<li><a href="#">Travel Tips</li>
+				<li><a href="index.html" class="navbar-active">Home</li>
+				<li><a href="traveltips.html">Travel Tips</li>
 				<li><a href="#">Community Guide</li>
-				<li><a href="#">About</li>
+				<li><a href="#">More</li>
 			</ul>
 		</div>
 	</header>
 
 
-	<script>
-		const toggleBtn = document.querySelector('.toggle-btn')
-		const toggleBtnIcon = document.querySelector('.toggle-btn i')
-		const dropDownMenu = document.querySelector('.dropdown-menu')
-
-		toggleBtn.onclick = function () {
-			dropDownMenu.classList.toggle('open')
-			const isOpen = dropDownMenu.classList.contains('open')
-
-			toggleBtnIcon.classList = isOpen
-				? 'fa-solid fa-xmark'
-				: 'fa-solid fa-bars'
-		}
-	</script>
 
 	<!--IMAGES SLIDERS-->
 	<div class="slider-container">
@@ -121,8 +106,9 @@
 			beaches, lush landscapes, and delve into the echoes of its intriguing past, where the mystique of the island
 			continues to captivate the curious traveler.</p>
 	</div>
-	<div id="content-opener-awaits">
+<div id="content-opener-awaits">
 	<h2>What Awaits You</h2>
+	
 </div>
 	<div class="second-content-container-row">
 		<div class="azure-left">
@@ -290,8 +276,7 @@
   </div>
   <!--Footer End-->
 
-	<script src="app.js"></script>
-
+  <script src="app.js"></script>
 </body>
 
 </html>
