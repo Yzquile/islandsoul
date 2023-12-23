@@ -485,156 +485,6 @@ a {
 }
 
 
-/** START HERE ON GALLERY **/
-@media (min-width: 576px) {
-	.container {
-		max-width: 540px;
-	}
-}
-
-@media (min-width: 768px) {
-	.container {
-		max-width: 720px;
-	}
-}
-
-@media (min-width: 992px) {
-	.container {
-		max-width: 960px;
-	}
-}
-
-@media (min-width: 1200px) {
-	.container {
-		max-width: 1140px;
-	}
-}
-
-.row {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	margin-right: -15px;
-	margin-left: -15px;
-	max-width: 1300px;
-	margin: auto;
-}
-
-.column {
-	position: relative;
-	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px;
-	-ms-flex: 0 0 100%;
-	flex: 0 0 100%;
-	max-width: 1300px;
-}
-
-@media (min-width: 576px) {
-	.column {
-		-ms-flex: 0 0 100%;
-		flex: 0 0 100%;
-		max-width: 100%;
-	}
-}
-
-@media (min-width: 768px) {
-	.column {
-		-ms-flex: 0 0 50%;
-		flex: 0 0 50%;
-		max-width: 50%;
-	}
-}
-
-@media (min-width: 992px) {
-	.column {
-		-ms-flex: 0 0 33.333333%;
-		flex: 0 0 33.333333%;
-		max-width: 33.333333%;
-	}
-}
-
-
-@media(max-width: 767.98px) {
-	.section-title h1 {
-		font-size: 40px;
-		letter-spacing: 3px;
-	}
-}
-
-@media(max-width: 567.98px) {
-	.section-title h1 {
-		font-size: 30px;
-		letter-spacing: 2px;
-	}
-}
-
-
-
-/**********************************/
-/********** Effect #1 CSS *********/
-/**********************************/
-.effect-1 {
-	position: relative;
-	margin: 30px 0;
-	overflow: hidden;
-}
-
-.effect-1 .effect-img {
-	font-size: 0;
-	width: 100%;
-	height: 250px;
-}
-
-.effect-1 .effect-img img {
-	width: 100%;
-	height: auto;
-}
-
-.effect-1 .effect-text {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	padding: 30px;
-	top: calc(100% - 60px);
-	left: 0;
-	text-align: center;
-	background: rgba(0, 0, 0, .5);
-	transition: .5s;
-}
-
-.effect-1:hover .effect-text {
-	top: 0;
-}
-
-.effect-1 .effect-text h2 {
-	height: 45px;
-	color: #ffffff;
-	font-size: 25px;
-	margin: -15px 0 0 0;
-	transition: .5s;
-}
-
-.effect-1:hover .effect-text h2 {
-	margin: 0;
-}
-
-.effect-1 .effect-text p {
-	color: #ffffff;
-	font-size: 16px;
-	margin-bottom: 20px;
-}
-
-
-.effect-1 .effect-btn .btn {
-	display: inline-block;
-	height: 35px;
-	padding: 7px 15px;
-	color: #333333;
-	background: #ffffff;
-}
-
 /*FOOTER CSS STARTS HERE*/
 
 .pg-footer {
@@ -979,4 +829,168 @@ a {
 	/* .footer-content-column {
 		width: 49.99%;
 	} */
+}
+
+@media  (max-width: 1080px) {
+    .second-content-container-row .content-container {
+    display: block;
+    width: auto;
+    margin: auto;
+    text-align: center;
+    }
+    .second-content-container-row img {
+        margin:  auto;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/** START HERE ON GALLERY **/
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.column {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 1300px;
+}
+
+@media (min-width: 576px) {
+    .column {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .column {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .column {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+
+@media(max-width: 767.98px) {
+    .section-title h1 {
+        font-size: 40px;
+        letter-spacing: 3px;
+    }
+}
+
+@media(max-width: 567.98px) {
+    .section-title h1 {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+}
+
+
+
+/**********************************/
+/********** Effect #1 CSS *********/
+/**********************************/
+.effect-1 {
+    position: relative;
+    margin: 30px 0;
+    overflow: hidden;
+}
+
+.effect-1 .effect-img {
+    font-size: 0;
+    width: 100%;
+    height: 250px;
+}
+
+.effect-1 .effect-img img {
+    width: 100%;
+    height: auto;
+}
+
+.effect-1 .effect-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    top: calc(100% - 60px);
+    left: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, .5);
+    transition: .5s;
+}
+
+.effect-1:hover .effect-text {
+    top: 0;
+}
+
+.effect-1 .effect-text h2 {
+    height: 45px;
+    color: #ffffff;
+    font-size: 25px;
+    margin: -15px 0 0 0;
+    transition: .5s;
+}
+
+.effect-1:hover .effect-text h2 {
+    margin: 0;
+}
+
+.effect-1 .effect-text p {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+.effect-1 .effect-btn .btn {
+    display: inline-block;
+    height: 35px;
+    padding: 7px 15px;
+    color: #333333;
+    background: #ffffff;
 }
