@@ -1,0 +1,13 @@
+@media  (max-width: 1080px) {
+    .second-content-container-row .content-container {
+    display: block;
+    width: auto;
+    margin: auto;
+    text-align: center;
+    }
+    .second-content-container-row img {
+        margin:  auto;
+        justify-content: center;
+        align-items: center;
+    }
+}
