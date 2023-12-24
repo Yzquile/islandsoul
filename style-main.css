@@ -677,8 +677,13 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 1230px;
-	padding: 40px 15px 450px;
+	padding: 40px 15px 450px; /*bottom padding is 450px before changes to 3 columns*/
 	position: relative;
+	/* made this changes for footer 3columns*/
+	height: 4rem;
+	max-height: 100%;
+	display: flex;
+	justify-content: space-between;
 }
 
 .footer-content-column {
@@ -698,6 +703,7 @@ a {
 .footer-logo-link {
 	display: inline-block;
 }
+
 
 .footer-menu {
 	margin-top: 30px;
@@ -834,10 +840,11 @@ a {
 	top: 50%;
 }
 
-/* I added this part */
+/* added this part for the logo */
 .footer-logo .footer-logo-link img {
 	width: 100%;
-	height: 10em;
+	height: 100%;
+
 	text-shadow: 2px 2px 4px rgb(255, 255, 255);
 }
 
@@ -936,7 +943,7 @@ a {
 
 
 /* Media Query For different screens */
-@media (min-width:320px) and (max-width:479px) {
+@media (min-width:320px) and (max-width:480px) {
 
 	/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
 	.footer-content {
@@ -945,6 +952,7 @@ a {
 		max-width: 1230px;
 		padding: 40px 15px 1050px;
 		position: relative;
+		display: block;
 	}
 }
 
@@ -957,10 +965,11 @@ a {
 		max-width: 1230px;
 		padding: 40px 15px 1050px;
 		position: relative;
+		display: block;
 	}
 }
 
-@media (min-width:600px) and (max-width: 800px) {
+@media (min-width:600px) and (max-width: 700px) {
 
 	/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 	.footer-content {
@@ -969,12 +978,18 @@ a {
 		max-width: 1230px;
 		padding: 40px 15px 1050px;
 		position: relative;
-	}
+		display: block;
+}
+.footer-logo {
+	display: flex;
+	justify-content: center;
 }
 
 @media (min-width:801px) {
 	/* tablet, landscape iPad, lo-res laptops ands desktops */
-
+	.footer-content {
+		display: flex;
+	}
 }
 
 @media (min-width:1025px) {
@@ -986,9 +1001,6 @@ a {
 	/* hi-res laptops and desktops */
 
 }
-
-
-
 
 @media (min-width: 760px) {
 	.footer-content {
@@ -1020,3 +1032,58 @@ a {
 		width: 49.99%;
 	} */
 }
+}
+/******* ABOUT HTML CSS STARTS HERE *********/
+.video-opener-container {
+	box-sizing: border-box;
+	margin: auto;
+	width: 1200px;
+	max-width: 100%;
+	text-align: center;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	overflow: hidden;
+	border: 1px solid yellowgreen;
+}
+.video-opener-container iframe {
+	position: block;
+	width: 100%;
+	max-width: 100%;
+	left: 0;
+	top: 0;
+	flex-wrap: wrap;
+}
+/*BRIEF HISTORY START HERE*/
+	.brief-history-container {
+		width: 1200px;
+		max-width: 100%;
+		position: relative;
+		margin: auto;
+	}
+	.brief-history {
+		display: block;
+		margin: 2rem auto;
+		padding: 10px 10px;
+		align-items: center;
+	}
+	.brief-history h2,p {
+		font-family: 'Alice', serif;
+		font-size: 1.3em;
+		line-height: 1.5;
+		padding: 0 1.8rem;
+		text-align: center;
+		text-align: justify;
+	}
+	.brief-history h2 {
+		font-size: 4rem;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
+	.brief-history p {
+		text-indent: 150px;
+	}
