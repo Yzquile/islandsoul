@@ -8,6 +8,7 @@
 --almond: #E8DCCFff;
 --carrot-orange: #F49838ff;
 --canary: #FFEE00ff;
+--link colors: #093950;
 */
 /* CSS HSL
 --black: hsla(0, 0%, 0%, 1);
@@ -58,9 +59,11 @@ $gradient-radial: radial-gradient(#000000ff, #0AA794ff, #E8DCCFff, #F49838ff, #F
 	-webkit-box-sizing: border-box;
 }
 
+html,
 body {
 	height: 100vh;
 	background-color: #E8DCCFff;
+	scroll-behavior: smooth;
 }
 
 .header {
@@ -93,6 +96,10 @@ body {
 	color: orange;
 }
 
+.navbar .links a {
+	color: #093950;
+}
+
 li {
 	list-style: none;
 }
@@ -118,6 +125,10 @@ a {
 .socmed {
 	font-size: 26px;
 	padding: 0 15px;
+}
+
+.socmed i {
+	color: #093950;
 }
 
 .socmed i:hover {
@@ -151,6 +162,9 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+.dropdown-menu .links a {
+	color: #093950;
 }
 
 .dropdown-menu li:hover {
@@ -408,6 +422,7 @@ a {
 	width: 100%;
 	max-width: fit-content;
 	margin: auto;
+	align-items: center;
 }
 
 .second-content-container-row .content p {
@@ -444,7 +459,7 @@ a {
 
 .second-content-container-row h3 {
 	color: #0AA794ff;
-	font-size: larger;
+	font-size: 3em;
 	text-align: center;
 }
 
@@ -570,10 +585,8 @@ a {
 	}
 }
 
-
-
 /**********************************/
-/********** Effect #1 CSS *********/
+/********** DESTINATION GALLERY CSS *********/
 /**********************************/
 .effect-1 {
 	position: relative;
@@ -822,9 +835,9 @@ a {
 }
 
 /* I added this part */
-.footer-logo img {
+.footer-logo .footer-logo-link img {
 	width: 100%;
-	height: auto;
+	height: 10em;
 	text-shadow: 2px 2px 4px rgb(255, 255, 255);
 }
 
@@ -863,7 +876,7 @@ a {
 }
 
 .footer-copyright {
-	background-color: #027b9a;
+	background-color: #0AA794ff;
 	color: #fff;
 	padding: 15px 30px;
 	text-align: center;
@@ -889,8 +902,35 @@ a {
 	text-decoration: none;
 }
 
-
-
+/*** BACK TO TOP SCROLL***/
+.container-top {
+	--fade: 120px;
+	
+	display: flex;
+	align-items: flex-end;
+	width: 60px;
+	-webkit-mask:linear-gradient(#0000 100vh,#000 calc(100vh + var(--fade)));
+  }
+  
+  .top {
+	position: sticky;
+	bottom: 20px;      
+	margin-right:10px; 
+	
+	/* visual styling */
+	width:100%;
+	aspect-ratio:1;
+	background:#ff8b24;
+	border-radius:10px;
+  }
+  .top:before {
+	content:"";
+	position:absolute;
+	inset:30%;
+	transform:translateY(20%) rotate(-45deg);
+	border-top:5px solid #fff;
+	border-right:5px solid #fff;
+  }
 
 
 
