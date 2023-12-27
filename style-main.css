@@ -54,7 +54,7 @@ $gradient-radial: radial-gradient(#000000ff, #0AA794ff, #E8DCCFff, #F49838ff, #F
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Open Sans', sans-serif, 'Alice', sans-serif;
+	font-family: 'Alice', sans-serif;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
@@ -108,7 +108,7 @@ a {
 	text-decoration: none;
 	font-size: 1.3rem;
 	font-weight: bold;
-	font-family: 'Alice', serif;	
+	font-family: 'Alice', serif;
 }
 
 .navbar li a:hover {
@@ -163,6 +163,7 @@ a {
 	align-items: center;
 	justify-content: center;
 }
+
 .dropdown-menu .links a {
 	color: #093950;
 }
@@ -242,6 +243,7 @@ a {
 	height: 100%;
 	object-fit: cover;
 }
+
 /* I opt out using buttons, use the dots below slider instead!
 .slider .buttons {
 	position: absolute;
@@ -308,7 +310,8 @@ a {
 	color: #fff;
 	font-weight: bold;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-	z-index: 1; /* Ensure it's on top of the slider */
+	z-index: 1;
+	/* Ensure it's on top of the slider */
 }
 
 .slider-text h1 {
@@ -392,7 +395,6 @@ a {
 #content-opener-awaits {
 	max-width: 100%;
 	width: 1300px;
-	text-align: center;
 	margin: 1rem auto;
 	background-color: #027b9a;
 	height: auto;
@@ -410,6 +412,7 @@ a {
 	font-size: 1.3em;
 	line-height: 1.5;
 	color: #fffff2;
+	text-align: center;
 }
 
 .second-content-container-row {
@@ -680,7 +683,8 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 1230px;
-	padding: 40px 15px 450px; /*bottom padding is 450px before changes to 3 columns*/
+	padding: 40px 15px 450px;
+	/*bottom padding is 450px before changes to 3 columns*/
 	position: relative;
 	/* made this changes for footer 3columns*/
 	height: 4rem;
@@ -905,6 +909,7 @@ a {
 	line-height: 18px;
 	margin-bottom: 0;
 	margin-top: 0;
+	text-align: center;
 }
 
 .footer-copyright-link {
@@ -915,32 +920,33 @@ a {
 /*** BACK TO TOP SCROLL***/
 .container-top {
 	--fade: 120px;
-	
+
 	display: flex;
 	align-items: flex-end;
 	width: 60px;
-	-webkit-mask:linear-gradient(#0000 100vh,#000 calc(100vh + var(--fade)));
-  }
-  
-  .top {
+	-webkit-mask: linear-gradient(#0000 100vh, #000 calc(100vh + var(--fade)));
+}
+
+.top {
 	position: sticky;
-	bottom: 20px;      
-	margin-right:10px; 
-	
+	bottom: 20px;
+	margin-right: 10px;
+
 	/* visual styling */
-	width:100%;
-	aspect-ratio:1;
-	background:#ff8b24;
-	border-radius:10px;
-  }
-  .top:before {
-	content:"";
-	position:absolute;
-	inset:30%;
-	transform:translateY(20%) rotate(-45deg);
-	border-top:5px solid #fff;
-	border-right:5px solid #fff;
-  }
+	width: 100%;
+	aspect-ratio: 1;
+	background: #ff8b24;
+	border-radius: 10px;
+}
+
+.top:before {
+	content: "";
+	position: absolute;
+	inset: 30%;
+	transform: translateY(20%) rotate(-45deg);
+	border-top: 5px solid #fff;
+	border-right: 5px solid #fff;
+}
 
 
 
@@ -982,111 +988,222 @@ a {
 		padding: 40px 15px 1050px;
 		position: relative;
 		display: block;
-}
-.footer-logo {
-	display: flex;
-	justify-content: center;
-}
-
-@media (min-width:801px) {
-	/* tablet, landscape iPad, lo-res laptops ands desktops */
-	.footer-content {
-		display: flex;
-	}
-}
-
-@media (min-width:1025px) {
-	/* big landscape tablets, laptops, and desktops */
-
-}
-
-@media (min-width:1281px) {
-	/* hi-res laptops and desktops */
-
-}
-
-@media (min-width: 760px) {
-	.footer-content {
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 1230px;
-		padding: 40px 15px 450px;
-		position: relative;
 	}
 
-	.footer-wave-svg {
-		height: 50px;
-	}
-
-	.footer-content-column {
-		width: 24.99%;
-	}
-
-	.footer-logo img {
-		width: 3rem;
-		height: auto;
-		max-width: 100%;
-		text-shadow: 2px 2px 4px rgb(255, 255, 255);
-	}
-}
-
-@media (min-width: 568px) {
-	/* .footer-content-column {
-		width: 49.99%;
-	} */
-}
-}
-/******* ABOUT HTML CSS STARTS HERE *********/
-.video-opener-container {
-	box-sizing: border-box;
-	margin: auto;
-	width: 1200px;
-	max-width: 100%;
-	text-align: center;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	overflow: hidden;
-	border: 1px solid yellowgreen;
-}
-.video-opener-container iframe {
-	position: block;
-	width: 100%;
-	max-width: 100%;
-	left: 0;
-	top: 0;
-	flex-wrap: wrap;
-}
-/*BRIEF HISTORY START HERE*/
-	.brief-history-container {
-		width: 1200px;
-		max-width: 100%;
-		position: relative;
-		margin: auto;
-	}
-	.brief-history {
-		display: block;
-		margin: 2rem auto;
-		padding: 10px 10px;
-		align-items: center;
-	}
-	.brief-history h2,p {
-		font-family: 'Alice', serif;
-		font-size: 1.3em;
-		line-height: 1.5;
-		padding: 0 1.8rem;
-		text-align: center;
-		text-align: justify;
-	}
-	.brief-history h2 {
-		font-size: 4rem;
-		width: 100%;
+	.footer-logo {
 		display: flex;
 		justify-content: center;
-		text-align: center;
 	}
-	.brief-history p {
-		text-indent: 150px;
+
+	@media (min-width:801px) {
+
+		/* tablet, landscape iPad, lo-res laptops ands desktops */
+		.footer-content {
+			display: flex;
+		}
 	}
+
+	@media (min-width:1025px) {
+		/* big landscape tablets, laptops, and desktops */
+
+	}
+
+	@media (min-width:1281px) {
+		/* hi-res laptops and desktops */
+
+	}
+
+	@media (min-width: 760px) {
+		.footer-content {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 1230px;
+			padding: 40px 15px 450px;
+			position: relative;
+		}
+
+		.footer-wave-svg {
+			height: 50px;
+		}
+
+		.footer-content-column {
+			width: 24.99%;
+		}
+
+		.footer-logo img {
+			width: 3rem;
+			height: auto;
+			max-width: 100%;
+			text-shadow: 2px 2px 4px rgb(255, 255, 255);
+		}
+	}
+
+	@media (min-width: 568px) {
+		/* .footer-content-column {
+		width: 49.99%;
+	} */
+	}
+}
+
+/******* ABOUT HTML CSS STARTS HERE *********/
+.video-opener {
+	position: relative;
+	overflow: hidden;
+	width: 95%;
+	padding-top: 56.25%;
+}
+
+.video-opener-container {
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+
+.video-opener-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.video-opener-container p {
+	position: relative;
+	bottom: 0;
+	font-style: italic;
+	font-size: small;
+}
+
+/*BRIEF HISTORY START HERE*/
+.brief-history-container {
+	width: 1300px;
+	max-width: 100%;
+	position: relative;
+	margin: auto;
+}
+
+.brief-history {
+	display: block;
+	margin: 2rem auto;
+	padding: 10px 10px;
+	align-items: center;
+}
+
+.brief-history h2,
+p {
+	font-family: 'Alice', serif;
+	font-size: 1.3em;
+	line-height: 1.5;
+	padding: 0 1.8rem;
+	text-align: center;
+	text-align: justify;
+}
+
+.brief-history h2 {
+	font-size: 4rem;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.brief-history p {
+	text-indent: 150px;
+}
+
+/*CONTENT BANNER AND BELOW*/
+.content-banner-container {
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.content-banner-container img {
+	position: relative;
+	width: 1200px;
+	max-width: 100%;
+}
+
+.festivals-container {
+	display: block;
+	margin: 2rem auto;
+	width: 1300px;
+	max-width: 100%;
+	text-align: center;
+}
+
+.festivals-container .festival-introduction h2,
+p {
+	font-family: 'Alice', serif;
+	line-height: 1.5;
+	padding: 0 1.8rem;
+}
+
+.festivals-container .festival-introduction h2 {
+	font-size: 2.5em;
+	margin: 1rem auto;
+}
+
+.festivals-container .festival-introduction p {
+	text-indent: 150px;
+}
+
+.festival-group {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 20px;
+}
+
+.festival-image-container {
+	flex: 1;
+	position: relative;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+#credits {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 2px;
+	margin: 0;
+}
+
+#credits a {
+	font-size: small;
+	font-style: italic;
+	color: #093950;
+}
+#credits a:hover {
+	color: blue;
+}
+
+#festival-subheader {
+	font-style: italic;
+}
+
+.festival-details {
+	flex: 1;
+	padding: 20px;
+}
+.festival-details h1 {
+	letter-spacing: 2px;
+}
+.festival-details .popup-vimeo {
+	font-size: 1rem;
+	color: orangered;
+}
+h1 {
+	color: #333;
+}
+
+@media (max-width: 768px) {
+	.festival-group {
+		flex-direction: column;
+	}
+}

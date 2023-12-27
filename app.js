@@ -80,3 +80,16 @@ toggleBtn.onclick = function () {
         ? 'fa-solid fa-xmark'
         : 'fa-solid fa-bars';
 }; 
+
+
+// JS for about.html video popup
+$(function() {
+    $('.popup-youtube, .popup-vimeo').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
+    });
+});
