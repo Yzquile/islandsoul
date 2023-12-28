@@ -1,13 +1,28 @@
-@media  (max-width: 1080px) {
+@media (max-width: 1080px) {
     .second-content-container-row .content-container {
-    display: block;
-    width: auto;
-    margin: auto;
-    text-align: center;
+        display: block;
+        width: auto;
+        margin: auto;
+        text-align: center;
     }
+
     .second-content-container-row img {
-        margin:  auto;
+        margin: auto;
         justify-content: center;
         align-items: center;
     }
+}
+
+.vh {
+    position: relative;
+    margin: auto;
+    width: 1500px;
+}
+
+.vh .wrap img {
+    max-width: 100%;
+    margin: auto;
+}
+.wrap p {
+    text-align: center;
 }

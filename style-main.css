@@ -1,5 +1,6 @@
 @charset 'UTF-8';
 @import url('https://fonts.googleapis.com/css2?family=Alice&family=Kaushan+Script&family=Montserrat:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* COLOR PALETTE*/
 /* CSS HEX
@@ -113,6 +114,7 @@ a {
 
 .navbar li a:hover {
 	color: orange;
+	transition: color 0.3s;
 }
 
 .navbar .toggle-btn {
@@ -1048,18 +1050,19 @@ a {
 
 /******* ABOUT HTML CSS STARTS HERE *********/
 .video-opener {
-    position: relative;
-    overflow: hidden;
-    width: 1200px;
-    max-width: 100%;
-    margin: auto;
+	position: relative;
+	overflow: hidden;
+	width: 1200px;
+	max-width: 100%;
+	margin: auto;
 }
 
 .video-opener iframe {
-    position: relative;
+	position: relative;
 	aspect-ratio: 16 / 9;
 	width: 100%;
 }
+
 .video-opener p {
 	font-size: 0.8em;
 	font-style: italic;
@@ -1105,89 +1108,92 @@ p {
 
 /*CONTENT BANNER AND BELOW*/
 .content-banner-container {
-    margin: auto;
-    display: flex;
-    justify-content: center;
+	margin: auto;
+	display: flex;
+	justify-content: center;
 }
 
 .content-banner-container img {
-    position: relative;
-    width: 1200px;
-    max-width: 100%;
+	position: relative;
+	width: 1200px;
+	max-width: 100%;
 }
 
 .festivals-container {
-    display: block;
-    margin: 2rem auto;
-    width: 100%; /* Adjusted to full width */
-    max-width: 1300px;
-    text-align: center;
+	display: block;
+	margin: 2rem auto;
+	width: 100%;
+	/* Adjusted to full width */
+	max-width: 1300px;
+	text-align: center;
 }
 
 .festivals-container .festival-introduction h2,
 .festivals-container .festival-introduction p {
-    font-family: 'Alice', serif;
-    line-height: 1.5;
-    padding: 0 1.8rem;
+	font-family: 'Alice', serif;
+	line-height: 1.5;
+	padding: 0 1.8rem;
 }
 
 .festivals-container .festival-introduction h2 {
-    font-size: 2.5em;
-    margin: 1rem auto;
+	font-size: 2.5em;
+	margin: 1rem auto;
 }
 
 .festivals-container .festival-introduction p {
-    text-indent: 150px;
+	text-indent: 150px;
 }
 
 .festival-group {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 20px;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 20px;
 }
 
 .festival-image-container {
-    flex: 1;
-    position: relative;
+	flex: 1;
+	position: relative;
 }
 
 img {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
 }
 
 #festival-subheader {
-    font-style: italic;
-    text-align: center;
+	font-style: italic;
+	text-align: center;
 }
 
 .festival-details {
-    flex: 1;
-    padding: 20px;
+	flex: 1;
+	padding: 20px;
 }
 
 .festival-details h1 {
-    letter-spacing: 2px;
+	letter-spacing: 2px;
 }
 
 .festival-details .popup-vimeo {
-    font-size: 1rem;
-    color: orangered;
+	font-size: 1rem;
+	color: orangered;
 }
 
 h1 {
-    color: #333;
+	color: #333;
 }
 
 @media (max-width: 768px) {
-    .festival-group {
-        flex-direction: column;
-    }
+	.festival-group {
+		flex-direction: column;
+	}
 
-    #credits {
-        position: static; /* Change to static positioning for smaller screens */
-        margin-top: 10px; /* Add margin for separation between image and credits */
-    }
+	#credits {
+		position: static;
+		/* Change to static positioning for smaller screens */
+		margin-top: 10px;
+		/* Add margin for separation between image and credits */
+	}
 }
 
 
@@ -1199,26 +1205,106 @@ h1 {
 	max-width: 100%;
 	text-align: center;
 }
+
 .traditions-group {
 	position: relative;
 }
 
+.traditions-group img {
+	margin-bottom: 3rem;
+}
+
+.traditions-group img:hover+#cul-trad-credits a {
+	color: #027b9a;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 0 2px;
+}
+
 #cul-trad-credits {
 	position: absolute;
-	bottom: 0;
+	bottom: 3rem;
 	left: 0;
 	margin: 0;
 	padding: 0;
 }
 
-#cul-trad-credits a{
+
+#cul-trad-credits a {
 	font-size: small;
 	font-style: italic;
 	margin: 0 auto;
 	color: white;
+	transition: color 0.3s, background-color 0.3s, padding 0.3s;
 }
-#cul-trad-credits a:hover{
+
+#cul-trad-credits a:hover {
 	color: #027b9a;
 	background-color: rgba(255, 255, 255, 0.8);
 	padding: 0 2px;
+}
+
+
+
+
+/* The Modal (background) */
+.modal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	padding-top: 100px;
+	/* Location of the box */
+	left: 0;
+	top: 0;
+	margin: auto;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4);
+	font-family: "Outfit", sans-serif;
+	/* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 100%;
+	max-width: 600px;
+	color: #000;
+}
+
+*::-webkit-scrollbar {
+	background-color: transparent;
+	width: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+	border-radius: 99px;
+	background-color: #ddd;
+	border: 4px solid #fff;
+}
+
+/* The Close Button */
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
 }
