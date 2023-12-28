@@ -1048,36 +1048,22 @@ a {
 
 /******* ABOUT HTML CSS STARTS HERE *********/
 .video-opener {
-	position: relative;
-	overflow: hidden;
-	width: 95%;
-	padding-top: 56.25%;
-	max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
 }
 
-.video-opener-container {
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
+.video-opener iframe {
+    position: relative;
+	aspect-ratio: 16 / 9;
+	width: 100%;
 }
-
-.video-opener-container iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	width: 1200px;
-	height: 720px;
-	max-width: 100%;
-	max-height: 100%;
-}
-
-.video-opener-container p {
-	position: relative;
-	bottom: 0;
+.video-opener p {
+	font-size: 0.8em;
 	font-style: italic;
-	font-size: small;
+	padding-left: 0;
 }
 
 /*BRIEF HISTORY START HERE*/
@@ -1119,103 +1105,91 @@ p {
 
 /*CONTENT BANNER AND BELOW*/
 .content-banner-container {
-	margin: auto;
-	display: flex;
-	justify-content: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .content-banner-container img {
-	position: relative;
-	width: 1200px;
-	max-width: 100%;
+    position: relative;
+    width: 1200px;
+    max-width: 100%;
 }
 
 .festivals-container {
-	display: block;
-	margin: 2rem auto;
-	width: 1300px;
-	max-width: 100%;
-	text-align: center;
+    display: block;
+    margin: 2rem auto;
+    width: 100%; /* Adjusted to full width */
+    max-width: 1300px;
+    text-align: center;
 }
 
 .festivals-container .festival-introduction h2,
-p {
-	font-family: 'Alice', serif;
-	line-height: 1.5;
-	padding: 0 1.8rem;
+.festivals-container .festival-introduction p {
+    font-family: 'Alice', serif;
+    line-height: 1.5;
+    padding: 0 1.8rem;
 }
 
 .festivals-container .festival-introduction h2 {
-	font-size: 2.5em;
-	margin: 1rem auto;
+    font-size: 2.5em;
+    margin: 1rem auto;
 }
 
 .festivals-container .festival-introduction p {
-	text-indent: 150px;
+    text-indent: 150px;
 }
 
 .festival-group {
-	display: flex;
-	flex-direction: row;
-	margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
 }
 
 .festival-image-container {
-	flex: 1;
-	position: relative;
+    flex: 1;
+    position: relative;
 }
 
 img {
-	width: 100%;
-	height: auto;
-}
-
-#credits {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	padding: 2px;
-	margin: 0;
-}
-
-#credits a {
-	font-size: small;
-	font-style: italic;
-	color: #093950;
-}
-
-#credits a:hover {
-	color: blue;
+    width: 100%;
+    height: auto;
 }
 
 #festival-subheader {
-	font-style: italic;
-	text-align: center;
+    font-style: italic;
+    text-align: center;
 }
 
 .festival-details {
-	flex: 1;
-	padding: 20px;
+    flex: 1;
+    padding: 20px;
 }
 
 .festival-details h1 {
-	letter-spacing: 2px;
+    letter-spacing: 2px;
 }
 
 .festival-details .popup-vimeo {
-	font-size: 1rem;
-	color: orangered;
+    font-size: 1rem;
+    color: orangered;
 }
 
 h1 {
-	color: #333;
+    color: #333;
 }
 
 @media (max-width: 768px) {
-	.festival-group {
-		flex-direction: column;
-	}
+    .festival-group {
+        flex-direction: column;
+    }
+
+    #credits {
+        position: static; /* Change to static positioning for smaller screens */
+        margin-top: 10px; /* Add margin for separation between image and credits */
+    }
 }
+
 
 /*Culture and Traditions Starts Here*/
 .traditions-container {
@@ -1224,4 +1198,27 @@ h1 {
 	width: 1300px;
 	max-width: 100%;
 	text-align: center;
+}
+.traditions-group {
+	position: relative;
+}
+
+#cul-trad-credits {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+
+#cul-trad-credits a{
+	font-size: small;
+	font-style: italic;
+	margin: 0 auto;
+	color: white;
+}
+#cul-trad-credits a:hover{
+	color: #027b9a;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 0 2px;
 }
