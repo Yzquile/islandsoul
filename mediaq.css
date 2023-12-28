@@ -17,12 +17,32 @@
     position: relative;
     margin: auto;
     width: 1500px;
+    max-width: 100%;
 }
 
 .vh .wrap img {
     max-width: 100%;
     margin: auto;
 }
-.wrap p {
+.wrap h2 {
+    margin: auto;
+    font-size: 1em;
     text-align: center;
+}
+.wrap p {
+    margin: auto;
+    font-size: 3em;
+    text-align: center;
+}
+@media (max-width: 664px) {
+    .wrap h2 {
+        margin: auto;
+        font-size: 1em;
+        text-align: center;
+    }
+    .wrap p {
+        margin: auto;
+        font-size: 1.5em;
+        text-align: center;
+    }
 }
