@@ -316,15 +316,15 @@ a {
 .slider-text h1 {
 	font-family: 'Kaushan Script', cursive;
 	font-size: 6vw;
-	width: 100%;
-	max-width: 1300px;
+	width: 1300px;
+	max-width: 100%;
 	text-align: center;
 	color: whitesmoke;
 }
 
 .slider-text p {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 28px;
+	font-size: 2.5vw;
 	width: 1300px;
 	max-width: 100%;
 	text-align: center;
@@ -1215,4 +1215,13 @@ h1 {
 	.festival-group {
 		flex-direction: column;
 	}
+}
+
+/*Culture and Traditions Starts Here*/
+.traditions-container {
+	display: block;
+	margin: 2rem auto;
+	width: 1300px;
+	max-width: 100%;
+	text-align: center;
 }
