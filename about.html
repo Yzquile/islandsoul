@@ -11,7 +11,7 @@
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- JS for Popup video -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
     <!-- Your custom JavaScript -->
@@ -61,6 +61,66 @@
             allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
             title="Video credits to Siquijor Tourism"></iframe>
         <p>Video credits to Siquijor Tourism</p>
+    </div>
+    <!--COUNT UP ANIMATION HERE-->
+    <div class="count-up-container">
+        <h1>ABOUT SIQUIJOR</h1>
+        <div class="count-up">
+            <div class="wrapper" style="background-image: url(images/drone-cambugahay.jpg);">
+                <h3>Land Area<br>(sq.km)</h3>
+                <hr class="line">
+                <div class="counter" data-count="343.5">0</div>
+            </div>
+            <div class="wrapper" style="background-image: url(images/home-banner.jpg);">
+                <h3>MUNICIPALITY</h3>
+                <hr class="line">
+                <div class="counter" data-count="6">0</div>
+            </div>
+            <div class="wrapper" style="background-image: url(images/whitevillas.png);">
+                <h3>Total Population<br>(as of 2020 census)</h3>
+                <hr class="line">
+                <div class="counter" data-count="103395">0</div>
+            </div>
+        </div>
+    </div>
+<script>
+    // Intersection Observer
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                animateCountUp();
+                // Stop observing once the animation has triggered
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 }); // Adjust the threshold as needed
+
+    // Start observing the .count-up-container
+    observer.observe(document.querySelector('.count-up-container'));
+
+    function animateCountUp() {
+        $(".counter").each(function () {
+            var count = $(this);
+            var countTo = count.attr('data-count');
+
+            $({ countNum: count.text() }).animate({
+                countNum: countTo,
+            },
+                {
+                    duration: 3000,
+                    easing: 'linear',
+                    step: function () {
+                        count.text(Math.floor(this.countNum).toLocaleString());
+                    },
+                    complete: function () {
+                        count.text(this.countNum.toLocaleString());
+                    }
+                });
+        });
+    }
+</script>
+<!--count up ANIMATION end-->
+
     </div>
     <!--Video credits to Siquijor Tourism-->
     <div class="brief-history-container">
