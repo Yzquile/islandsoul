@@ -83,7 +83,7 @@ toggleBtn.onclick = function () {
 
 
 // JS for about.html video popup
-$(function () {
+$(function() {
     $('.popup-youtube, .popup-vimeo').magnificPopup({
         disableOn: 700,
         type: 'iframe',
