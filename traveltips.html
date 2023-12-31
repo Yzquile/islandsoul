@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="app.js" defer></script>
 </head>
 
@@ -31,10 +37,10 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
             <div class="socmed">
-                <a href="https://web.facebook.com/profile.php?id=100069270840773" target="_blank"><i
-                        class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/joensal.creates/" target="_blank"><i
-                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://web.facebook.com/profile.php?id=100069270840773" target="_blank">
+                    <i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/joensal.creates/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
 
@@ -47,8 +53,253 @@
             </ul>
         </div>
     </header>
-    
-     <!--UNDER MAINTENANCE-->
+    <div class="travel-tips-contents">
+        <div class="travel-tips-icons-header">
+            <div class="icon-header-group">
+                <a href="#">
+                    <h2>Accommodations</h2><i class="fa-solid fa-bed"></i>
+                </a>
+            </div>
+            <div class="icon-header-group">
+                <a href="#transportation">
+                    <h2>Transportation</h2><i class="fa-solid fa-plane-departure"></i>
+                </a>
+            </div>
+            <div class="icon-header-group">
+                <a href="#general-tips">
+                    <h2>General Travel Tips</h2><i class="fa-solid fa-info"></i>
+                </a>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <!--SCRIPT FOR POSITION FIXED ON HEADER-->
+        <script>
+            $(document).ready(function () {
+                var header = $(".travel-tips-icons-header");
+                var scrollPosition = $(window).scrollTop();
+
+                $(window).scroll(function () {
+                    scrollPosition = $(window).scrollTop();
+
+                    if (scrollPosition > 1000) {
+                        header.addClass("fixed");
+                    } else {
+                        header.removeClass("fixed");
+                    }
+                });
+            });
+        </script>
+
+        <!-- ACCOMMODATIONS -->
+        <div class="opener-banner"><img src="https://siquijorprovince.com/wp-content/uploads/2021/03/DSC02012-3.jpg"
+                id="accommodation" alt="coco grove">
+            <h1>ACCOMMODATIONS</h1>
+        </div>
+        <div class="acco-main-container">
+            <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/1d/59/6f/turtle-cottage.jpg?w=1200&h=-1&s=1"
+                    alt="Coco Grove">
+                <div class="card-content">
+                    <h2>Coco Grove Beach Resort</h2>
+                    <p>Enjoy a most pleasurable holiday surrounded by nature - from tropical gardens, crystal blue sea
+                        to spectacular marine life, and unbelievable sunsets all on a long white sandy beach - attended
+                        to by our team known for their warm and authentic island hospitality.</p>
+                    <a href="https://www.tripadvisor.com.ph/Hotel_Review-g6929645-d650741-Reviews-Coco_Grove_Beach_Resort-Tubod_San_Juan_Siquijor_Island_Visayas.html"
+                        target="_blank" class="button">
+                        Book Now!
+                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/83/fb/6e/villas-with-view-of-grounds.jpg?w=800&h=-1&s=1"
+                    alt="White Villas Resort">
+                <div class="card-content">
+                    <h2>White Villas Resort</h2>
+                    <p>We are a small, cozy, and quiet beach resort close to cafes, restaurants, ATMs, dive shops. Our
+                        restaurant by the sea is open 7am-10pm. We have free wi-fi (Starlink), a small swimming pool,
+                        sunset beach bar, free kayaks, and arrange motorbike rentals and island tours. We are a
+                        non-smoking property.</p>
+                    <a href="https://www.tripadvisor.com.ph/Hotel_Review-g3175044-d6090512-Reviews-White_Villas_Resort-San_Juan_Siquijor_Island_Visayas.html"
+                        target="_blank" class="button">
+                        Book Now!
+                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/ad/c1/26/infinity-heights-resort.jpg?w=1200&h=-1&s=1"
+                    alt="Infinity Heights Resort">
+                <div class="card-content">
+                    <h2>Infinity Heights Resort</h2>
+                    <p> Infinity Heights Resort is the first hillside resort to operate on Siquijor and with six luxury
+                        cottages, five Seaview Premiums rooms and four duplex style cottages, guests will enjoy an
+                        exclusive, peaceful and personalized experience.</p>
+                    <a href="https://www.tripadvisor.com.ph/Hotel_Review-g3862482-d3838079-Reviews-Infinity_Heights_Resort-Siquijor_Siquijor_Island_Visayas.html"
+                        target="_blank" class="button">
+                        Book Now!
+                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/24/75/90/photo-credit-s-to-mrglio.jpg?w=500&h=-1&s=1"
+                    alt="Villa Marmarine">
+                <div class="card-content">
+                    <h2>Villa Marmarine</h2>
+                    <p>Villa Marmarine has different types of rooms there is an air condition suite cottage and
+                        executive cottage and fan room executive, deluxe family room, standard double cottage, standard
+                        twin cottage, standard cottage.</p>
+                    <a href="https://www.tripadvisor.com.ph/Hotel_Review-g664445-d968663-Reviews-Villa_Marmarine-Siquijor_Island_Visayas.html"
+                        target="_blank" class="button">
+                        Book Now!
+                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/49/6c/71/kawayan-holiday-resort.jpg?w=1200&h=-1&s=1"
+                    alt="Kawayan Holiday Resort">
+                <div class="card-content">
+                    <h2>Kawayan Holiday Resort</h2>
+                    <p>We look forward to welcoming you. With us you will be spoiled in a private and family atmosphere.
+                        Our guests are mainly from Europe and the Oceania region. We offer the ideal starting point for
+                        all island tours.</p>
+                    <a href="https://www.tripadvisor.com.ph/Hotel_Review-g10257809-d2430477-Reviews-Kawayan_Holiday_Resort-Cangmunag_San_Juan_Siquijor_Island_Visayas.html"
+                        target="_blank" class="button">
+                        Book Now!
+                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/8c/a0/54/photo6jpg.jpg?w=1100&h=-1&s=1"
+                    alt="Aquamare Beach Camp Resort">
+                <div class="card-content">
+                    <h2>Aquamare Beach Camp Resort</h2>
+                    <p> Facing the beachfront in Siquijor, Aquamare Beach Camp Resort features a restaurant, swimming
+                        pool and a bar. This 3-star resort offers a 24-hour front desk and luggage storage space. The
+                        resort also offers free WiFi and free private parking.</p>
+                    <a href="https://www.tripadvisor.com.ph/Hotel_Review-g3175037-d17521909-Reviews-Aquamare_Beach_Camp_Resort-Larena_Siquijor_Island_Visayas.html"
+                        target="_blank" class="button">
+                        Book Now!
+                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/99/a5/61/charisma-beach-resort.jpg?w=1200&h=-1&s=1"
+                    alt="Charisma Beach Resort">
+                <div class="card-content">
+                    <h2>Charisma Beach Resort</h2>
+                    <p>Charisma Beach Hotel is a family-friendly hotel offering air conditioning in the rooms, and it is
+                        easy to stay connected during your stay as free internet access is offered to guests.
+
+                        Plus, guests can enjoy a pool and an on-site restaurant, which have made this a popular choice
+                        among travelers visiting Siquijor Island. For guests with a vehicle, free parking is available.
+                    </p>
+                    <a href="https://www.tripadvisor.com.ph/Hotel_Review-g664445-d1229679-Reviews-Charisma_Beach_Resort-Siquijor_Island_Visayas.html"
+                        target="_blank" class="button">
+                        Book Now!
+                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/13/d9/fb/beach-view-in-our-restaurant.jpg?w=1200&h=-1&s=1"
+                    alt="Aloha Seaside Resort">
+                <div class="card-content">
+                    <h2>Aloha Seaside Resort</h2>
+                    <p>Bungalow hotel built in American Standards. Has a wifi, big room, queen-sized beds, satellite tv,
+                        closet and airconditioned rooms. It has its own eat all you can buffet restaurant where you can
+                        enjoy the scenic sunset view in the afternoon and enjoy the music at night while you dine.</p>
+                    <a href="https://www.tripadvisor.com.ph/Hotel_Review-g3175044-d13797301-Reviews-Aloha_Seaside_Resort-San_Juan_Siquijor_Island_Visayas.html"
+                        target="_blank" class="button">
+                        Book Now!
+                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/22/94/bb/tropical-fun-ta-sea-rentals.jpg?w=1000&h=-1&s=1"
+                    alt="Tropical Fun Ta Sea Rentals">
+                <div class="card-content">
+                    <h2>Tropical Fun Ta Sea Rentals</h2>
+                    <p> Tropical Fun Ta Sea Rentals offers guests an array of room amenities including air conditioning,
+                        and getting online is possible, as free wifi is available.
+
+                        The inn offers a 24 hour front desk, room service, and a picnic area, to make your visit even
+                        more pleasant. The property also features a lounge. Guests arriving by vehicle have access to
+                        free parking.</p>
+                    <a href="https://www.tripadvisor.com.ph/Hotel_Review-g3175044-d12496950-Reviews-Tropical_Fun_Ta_Sea_Rentals-San_Juan_Siquijor_Island_Visayas.html"
+                        target="_blank" class="button">
+                        Book Now!
+                        <span class="material-symbols-outlined">arrow_right_alt</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Transportation -->
+        <div class="opener-banner"><img
+                src="https://goaroundphilippines.com/wp-content/uploads/2020/11/Oceanjet-Ferry-Cebu-to-SIquijor-Philippines-1024x768.jpg"
+                id="transportation" alt="https://goaroundphilippines.com/how-to-get-to-siquijor/">
+            <h1>TRANSPORTATION</h1>
+        </div>
+        <div class="transpo-bg">
+            <div class="transpo-container">
+                <div class="transpo-opener"><b>
+                        <h1>How to Get to Siquijor</h1>
+                    </b></div>
+                <div class="transpo-contents">
+                    <div class="transpo-header">
+                        <h2>By Air</h2>
+                        <i class="fa-solid fa-plane"></i>
+                    </div>
+                    <p><em>Fly to Dumaguete:</em>
+                    <p>Book a flight to Dumaguete-Sibulan Airport (DGT) from major Philippine cities.</p>
+                    <p> <em>From Dumaguete to Siquijor:</em></p>
+                    <p> Take a tricycle or taxi to Dumaguete Port, then board a ferry to Siquijor. The ferry ride takes
+                        approximately 1-2 hours.</p>
+                    <div class="transpo-contents">
+                        <div class="transpo-header">
+                            <h2>By Land and Sea</h2>
+                            <i class="fa-solid fa-bridge-water"></i>
+                        </div>
+                        <p><em>Bus to Dumaguete:</em>
+                        <p>If coming from Cebu City, take a bus to Liloan Port in Southern Cebu. From Liloan Port, take
+                            a ferry to Sibulan Port in Negros Oriental.</p>
+                        <p> <em>From Negros Oriental to Siquijor:</em></p>
+                        <p> Take a tricycle or taxi to Dumaguete Port, then catch a ferry to Siquijor.</p>
+                    </div>
+                    <div class="transpo-contents">
+                        <div class="transpo-header">
+                            <h2>By Ferry from Other Islands</h2>
+                            <i class="fa-solid fa-ferry"></i>
+                        </div>
+                        <p><em>From Bohol:</em>
+                        <p>Take a ferry from Tagbilaran City to Larena Port in Siquijor.</p>
+                        <p> <em>From Cebu:</em></p>
+                        <p>Take a ferry from Cebu City or Liloan Port to Sibulan Port in Negros Oriental, then proceed
+                            to Siquijor.</p>
+                        <p style="font-style: italic; font-size: 1em;">TIPS: Check ferry schedules, consider weather
+                            conditions, and explore alternative routes.</p>
+                    </div>
+
+                    <a href="https://siquijordirectory.com/ferryshippings/" target="_blank" class="btn btn-bubble">Click
+                        for more info</a>
+                </div>
+            </div>
+        </div>
+    </div> <!--Closing Div for transportation-->
+    <div class="opener-banner"><img src="https://siquijorprovince.com/wp-content/uploads/2021/03/DSC02012-3.jpg"
+        id="accommodation" alt="coco grove">
+    <h1 style="text-align: center;">GENERAL TRAVEL TIPS</h1>
+</div>
+
+    <!--UNDER MAINTENANCE-->
      <div class="vh">
         <div class="wrap">
                 <img src="images/under-cons.png" alt="site-under-maintenance">
@@ -80,7 +331,7 @@
                 </div>
                 <div class="footer-content-column">
                     <div class="footer-menu">
-                        <h2 class="footer-menu-name"> Quick Links</h2>
+                        <h2 class="footer-menu-name">Quick Links</h2>
                         <ul id="menu-quick-links" class="footer-menu-list">
                             <li class="menu-item menu-item-type-custom menu-item-object-custom">
                                 <a target="_blank" rel="noopener noreferrer" href="#">Travel Tips</a>
