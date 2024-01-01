@@ -1878,3 +1878,32 @@ hr.line {
 	color: #808080;
 	font-size: 0.8em;
 }
+
+/* COMMUNITY GUIDE STARTS HERE */
+.activity-directory-container {
+	text-align: center;
+}
+.activity-directory {
+	box-sizing: border-box;
+	width: 850px;
+	max-width: 100%;
+	margin: 1rem auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+.activity-group {
+	border: 1px solid #027b9a;
+	display: grid;
+	padding: 0.5rem;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.activity-group a {
+	width: 100%;
+	color: #004658;
+}
+.activity-header {
+	text-align: center;
+	margin: 50px 0 0 5px;
+}
+
