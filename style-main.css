@@ -1414,6 +1414,7 @@ hr.line {
 
 .travel-tips-icons-header.fixed {
 	position: fixed;
+	max-width: 300px;
 	width: 100%;
 	top: 0;
 	left: 50%;
@@ -1421,6 +1422,19 @@ hr.line {
 	transform: translateX(-50%);
 	background-color: rgba(0, 0, 0, 0.4);
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.travel-tips-icons-header.fixed h2 {
+	display: none;
+}
+
+.travel-tips-icons-header.fixed i {
+	font-size: 1em;
+	color: whitesmoke;
+}
+
+.icon-header-group.fixed {
+	border: 1px solid #0AA794ff;
 }
 
 .icon-header-group {
@@ -1714,152 +1728,153 @@ hr.line {
 	text-indent: 3rem;
 	text-align: center;
 }
+
 /* Comments (travel tips page) */
 .comments-container {
 	max-width: 100%;
-    padding: 20px;
-    font-family: monospace;
-    box-shadow: 0 0 5px #000;
+	padding: 20px;
+	font-family: monospace;
+	box-shadow: 0 0 5px #000;
 }
 
 .comments-head {
-    text-transform: uppercase;
-    margin-bottom: 20px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
 }
 
 .text {
-    margin: 10px 0;
-    font-family: sans-serif;
-    font-size: 0.9em;
+	margin: 10px 0;
+	font-family: sans-serif;
+	font-size: 0.9em;
 }
 
 .commentbox {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
+	display: flex;
+	justify-content: space-around;
+	padding: 10px;
 }
 
-.commentbox > img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    /* float: left; */
-    margin-right: 20px;
-    object-fit: cover;
-    object-position: center;
+.commentbox>img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	/* float: left; */
+	margin-right: 20px;
+	object-fit: cover;
+	object-position: center;
 }
 
 .content {
-    width: 100%;
+	width: 100%;
 }
 
 .user {
-    border: none;
-    outline: none;
-    margin: 5px 0;
-    color: #808080;
-    margin-left: 20px;
-    padding: 10px;
+	border: none;
+	outline: none;
+	margin: 5px 0;
+	color: #808080;
+	margin-left: 20px;
+	padding: 10px;
 }
 
-.commentinput > input {
-    border: none;
-    padding: 10px;
-    padding-left: 0;
-    outline: none;
-    border-bottom: 2px solid blue;
-    margin-bottom: 10px;
-    width: 95%;
+.commentinput>input {
+	border: none;
+	padding: 10px;
+	padding-left: 0;
+	outline: none;
+	border-bottom: 2px solid blue;
+	margin-bottom: 10px;
+	width: 95%;
 }
 
 .buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #808080;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #808080;
 }
 
-.buttons > button {
-    padding: 5px 10px;
-    background: lightgrey;
-    color: #808080;
-    text-transform: uppercase;
-    border: none;
-    outline: none;
-    border-radius: 3px;
-    cursor: pointer;
+.buttons>button {
+	padding: 5px 10px;
+	background: lightgrey;
+	color: #808080;
+	text-transform: uppercase;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	cursor: pointer;
 }
 
-.buttons > button.abled {
-    background: blue;
-    color: #fff;
+.buttons>button.abled {
+	background: blue;
+	color: #fff;
 }
 
 .policy {
-    margin: 20px 0;
-    font-size: 0.8em;
-    font-family: Arial, sans-serif;
-    color: #808080;
+	margin: 20px 0;
+	font-size: 0.8em;
+	font-family: Arial, sans-serif;
+	color: #808080;
 }
 
 .policy a {
-    text-decoration: none;
-    color: blue;
+	text-decoration: none;
+	color: blue;
 	font-size: 1em;
 }
 
 .notify {
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
+	margin-right: 10px;
+	display: flex;
+	align-items: center;
 }
 
-.notify > input {
-    margin-right: 5px;
-    border: 2px solid #808080;
+.notify>input {
+	margin-right: 5px;
+	border: 2px solid #808080;
 }
 
 .parents {
-    font-family: Arial, sans-serif;
-    display: flex;
-    margin-bottom: 30px;
+	font-family: Arial, sans-serif;
+	display: flex;
+	margin-bottom: 30px;
 }
 
 .parents h1 {
-    font-size: 0.9em;
+	font-size: 0.9em;
 }
 
 .parents p {
-    margin: 10px 0;
-    font-size: 0.9em;
+	margin: 10px 0;
+	font-size: 0.9em;
 }
 
-.parents > img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 20px;
-    object-fit: cover;
-    object-position: center;
+.parents>img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 20px;
+	object-fit: cover;
+	object-position: center;
 }
 
 .engagements {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
 }
 
 .engagements img {
-    width: 20px;
+	width: 20px;
 
 }
 
 .engagements img:nth-child(1) {
-    margin-right: 10px;
-    width: 25px;
+	margin-right: 10px;
+	width: 25px;
 }
 
 .date {
-    color: #808080;
-    font-size: 0.8em;
+	color: #808080;
+	font-size: 0.8em;
 }
