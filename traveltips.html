@@ -295,11 +295,171 @@
         </div>
     </div> <!--Closing Div for transportation-->
     <div class="opener-banner"><img src="https://siquijorprovince.com/wp-content/uploads/2021/03/DSC02012-3.jpg"
-        id="accommodation" alt="coco grove">
-    <h1 style="text-align: center;">GENERAL TRAVEL TIPS</h1>
-</div>
+            id="general-tips" alt="coco grove">
+        <h1 style="text-align: center;">GENERAL TRAVEL TIPS</h1>
+    </div>
+    <div class="gen-tips-bg">
+        <div class="gen-tips-container">
+            <div class="gen-tips-opener">
+                <b>
+                    <h1>Essential Travel Insights</h1>
+                </b>
+            </div>
+            <div class="gen-tips-contents">
+                <h1><i class="fa-solid fa-money-check-dollar"></i>Currency and Banking</h1>
+                <p>Siquijor primarily uses the Philippine Peso (PHP). Ensure you have sufficient local currency for
+                    small purchases and transactions. ATMs are available in major towns, providing convenient access to
+                    cash. Notify your bank about your travel dates to avoid any issues with card transactions.</p>
+            </div>
+            <div class="gen-tips-contents">
+                <h1><i class="fa-solid fa-language"></i>Language</h1>
+                <p>While Filipino (Tagalog) is the official language, locals commonly speak Cebuano/Bisaya. English is
+                    widely understood, making communication relatively easy for travelers. Learn a few basic phrases in
+                    the local dialect to enhance your interactions and show appreciation for the culture.</p>
+            </div>
+            <div class="gen-tips-contents">
+                <h1><i class="fa-solid fa-cloud-sun"></i>Weather</h1>
+                <p>Siquijor has a tropical climate with a dry season from November to April and a wet season from May to
+                    October. Pack light clothing, sunscreen, and a rain jacket if visiting during the wet season. Check
+                    weather forecasts before planning outdoor activities.</p>
+            </div>
+            <div class="gen-tips-contents">
+                <h1><i class="fa-solid fa-place-of-worship"></i>Respectful Travel Practices</h1>
+                <p>Respect local traditions and practices by dressing modestly, especially when visiting religious
+                    sites. Remove your shoes before entering homes or sacred places. Greet locals with a friendly
+                    "hello" or "kumusta" to foster positive interactions.</p>
+            </div>
+            <div class="gen-tips-contents">
+                <h1><i class="fa-solid fa-shield-heart"></i>Health and Safety</h1>
+                <p>Stay hydrated, especially in the tropical climate. Use sunscreen to protect your skin from the sun's
+                    rays. Be cautious with street food; choose vendors with clean and hygienic setups. Ensure your
+                    vaccinations are up-to-date before traveling to Siquijor. </p>
+            </div>
+            <div class="gen-tips-contents">
+                <h1><i class="fa-solid fa-trash-can"></i>Exploration Etiquette</h1>
+                <p>Dispose of trash responsibly and participate in community initiatives promoting cleanliness and
+                    sustainability. Follow designated trails when hiking or trekking to minimize environmental impact.
+                    Capture memories with photographs but be mindful of local privacy and ask permission when necessary.
+                </p>
+            </div>
+            <div class="gen-tips-contents">
+                <h1><i class="fa-solid fa-tower-cell"></i>Connectivity and Communication</h1>
+                <p>Check local SIM card options for your phone to stay connected during your visit. Wi-Fi is available
+                    in many accommodations and restaurants. Download offline maps or use navigation apps to explore the
+                    island without relying solely on data.</p>
+            </div>
+            <div class="gen-tips-contents">
+                <h1><i class="fa-solid fa-user-shield"></i>Safety First</h1>
+                <p>While Siquijor is generally safe, be vigilant with your belongings. Keep important documents secure
+                    and be cautious in crowded areas. Familiarize yourself with emergency contact numbers and the
+                    location of the nearest medical facilities.</p>
+            </div>
+            <div class="gen-tips-contents">
+                <h1><i class="fa-solid fa-handshake-angle"></i>Cultural Immersion</h1>
+                <p>Engage with locals to learn more about their culture and traditions. Attend local events or festivals
+                    if your visit coincides with any celebrations. Participate respectfully and savor the richness of
+                    Siquijor's cultural heritage.</p>
+            </div>
+            <div class="gen-tips-contents">
+                <h1><i class="fa-solid fa-user"></i>User Feedback: Share Your Thoughts</h1>
+                <p>We value your feedback! Help us improve by sharing your thoughts and suggestions.</p>
+            </div>
+            <!-- Comments section -->
+            <div class="comments-container">
+                <div class="comments-head">
+                    <h1>Post a Comment</h1>
+                </div>
+                <div><span id="comment">0</span> Comments</div>
+                <div class="text">
+                    <p>We are happy to hear from you</p>
+                </div>
+                <div class="comments"></div>
+                <div class="commentbox">
+                    <img src="images/user1.png" alt="">
+                    <div class="content">
+                        <h2>Comment as: </h2>
+                        <input type="text" value="Anonymous" class="user">
 
-    <!--UNDER MAINTENANCE-->
+                        <div class="commentinput">
+                            <input type="text" placeholder="Enter comment" class="usercomment">
+                            <div class="buttons">
+                                <button type="submit" disabled id="publish">Publish</button>
+                                <div class="notify">
+                                    <input type="checkbox" class="notifyinput"> <span>Notify me</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="policy">This site is protected by reCAPTCHA and the Google <a href="">Privacy policy</a>
+                            and <a href="">Terms of Service</a> apply.</p>
+                    </div>
+                </div>
+            </div>
+            <script>
+                //   Comments
+                const USERID = {
+                    name: null,
+                    identity: null,
+                    image: null,
+                    message: null,
+                    date: null
+                }
+
+                const userComment = document.querySelector(".usercomment");
+                const publishBtn = document.querySelector("#publish");
+                const comments = document.querySelector(".comments");
+                const userName = document.querySelector(".user");
+                const notify = document.querySelector(".notifyinput");
+
+                userComment.addEventListener("input", e => {
+                    if (!userComment.value) {
+                        publishBtn.setAttribute("disabled", "disabled");
+                        publishBtn.classList.remove("abled")
+                    } else {
+                        publishBtn.removeAttribute("disabled");
+                        publishBtn.classList.add("abled")
+                    }
+                })
+
+                function addPost() {
+                    if (!userComment.value) return;
+                    USERID.name = userName.value;
+                    if (USERID.name === "Anonymous") {
+                        USERID.identity = false;
+                        USERID.image = "images/anonymous.png"
+                    } else {
+                        USERID.identity = true;
+                        USERID.image = "images/user.png"
+                    }
+
+                    USERID.message = userComment.value;
+                    USERID.date = new Date().toLocaleString();
+                    let published =
+                        `<div class="parents">
+                            <img src="${USERID.image}">
+                            <div>
+                                <h1>${USERID.name}</h1>
+                                <p>${USERID.message}</p>
+                                <div class="engagements"><img src="images/like.png" id="like"><img src="images/share.png" alt="share"></div>
+                                <span class="date">${USERID.date}</span>
+                            </div>    
+                        </div>`
+
+                    comments.innerHTML += published;
+                    userComment.value = "";
+                    publishBtn.classList.remove("abled")
+
+                    let commentsNum = document.querySelectorAll(".parents").length;
+                    document.getElementById("comment").textContent = commentsNum;
+
+                }
+
+                publishBtn.addEventListener("click", addPost);
+
+            </script>
+        </div>
+    </div>
+    </div>
+    <!--UNDER MAINTENANCE
      <div class="vh">
         <div class="wrap">
                 <img src="images/under-cons.png" alt="site-under-maintenance">
@@ -309,7 +469,7 @@
             </h2>
             <p>Thank you for your understanding.</p>
         </div>
-    </div>
+    </div>-->
 
     <!--FOOTER-->
     <div class="pg-footer">
